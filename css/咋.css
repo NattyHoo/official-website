@@ -1,0 +1,278 @@
+
+.single-solution-style1 {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.single-solution-style1 .img-holder{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+.single-solution-style1 .img-holder::before {
+    background: rgba(0, 0, 0, 0.50);
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.4s ease-in-out 0s;
+}
+.single-solution-style1:hover .img-holder::before{
+    opacity: 1;
+}
+.single-solution-style1 .img-holder img {
+    width: 100%;
+    transition: .5s ease;
+}
+.single-solution-style1:hover .img-holder img {
+    transform: translateX(0%) translateY(-40px) scale(1);
+}
+
+.single-solution-style1 .statics-content {
+    position: relative;
+    display: block;
+    z-index: 10;
+    padding: 36px 20px 33px;
+    box-shadow: 0px 3px 7px 1px rgba(240,240,240,0.7);
+    background: #ffffff;
+}
+.single-solution-style1 .text-holder{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding-left: 70px;
+}
+.single-solution-style1 .text-holder .icon{
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+.single-solution-style1 .text-holder .icon span:before{
+    font-size: 50px;
+    line-height: 50px;
+    color: #222222;
+}
+.single-solution-style1 .text-holder .text{
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+.single-solution-style1 .text-holder .text:before{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 2px;
+    height: 50px;
+    background: #fec144;
+    content: "";
+}
+.single-solution-style1 .text-holder .text h3{
+    color: #222222;
+    margin: 0 0 15px;
+}
+.single-solution-style1 .text-holder .text p{
+    margin: 0;
+}
+.single-solution-style1 .text-holder .text .readmore{
+    display: block;
+    padding-top: 15px;
+}
+
+.single-solution-style1 .overlay-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    display: block;
+    z-index: 11;
+    padding: 36px 20px 33px;
+    box-shadow: 0px 3px 7px 1px rgba(240,240,240,0.7);
+    background: #ffffff;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+.single-solution-style1:hover .overlay-content{
+    opacity: 1;
+    transform: translateX(0%) translateY(-40px) scale(1);
+}
+
+.services-style1-area .owl-dots {
+    position: relative;
+    display: block !important;
+    margin-top: 25px !important;
+}
+.services-style1-area .owl-dots .owl-dot{
+    background-image:none;
+    width: 10px;
+    height: 10px;
+    margin: 5px 5px;
+    border: 2px solid #d5d5d5;
+    padding:0px;
+    background: #ffffff;
+    border-radius:50%;
+    transition: all 500ms ease;
+    display: inline-block;
+}
+.services-style1-area .owl-dots .owl-dot span{
+    display:none;
+}
+.services-style1-area .owl-dots .owl-dot.active{
+    background:#fec144;
+    border-color: #fec144;
+    border-radius: 15px;
+}
+.services-style1-area .owl-dots .owl-dot:hover{
+    background:#fec144;
+    border-color: #fec144;
+}
+
+.services-style1-area {
+    position: relative;
+    display: block;
+    padding-bottom: 88px;
+}
+.single-solution-style1 {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.single-solution-style1 .img-holder{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+    z-index: 1;
+}
+.single-solution-style1 .img-holder::before {
+    background: rgba(0, 0, 0, 0.50);
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    transition: all 0.4s ease-in-out 0s;
+}
+.single-solution-style1:hover .img-holder::before{
+    opacity: 1;
+}
+.single-solution-style1 .img-holder img {
+    width: 100%;
+    transition: .5s ease;
+}
+.single-solution-style1:hover .img-holder img {
+    transform: translateX(0%) translateY(-40px) scale(1);
+}
+
+.single-solution-style1 .statics-content {
+    position: relative;
+    display: block;
+    z-index: 10;
+    padding: 36px 20px 33px;
+    box-shadow: 0px 3px 7px 1px rgba(240,240,240,0.7);
+    background: #ffffff;
+}
+.single-solution-style1 .text-holder{
+    position: relative;
+    display: block;
+    background: #ffffff;
+    padding-left: 70px;
+}
+.single-solution-style1 .text-holder .icon{
+    position: absolute;
+    top: 4px;
+    left: 0;
+}
+.single-solution-style1 .text-holder .icon span:before{
+    font-size: 50px;
+    line-height: 50px;
+    color: #222222;
+}
+.single-solution-style1 .text-holder .text{
+    position: relative;
+    display: block;
+    padding-left: 20px;
+}
+.single-solution-style1 .text-holder .text:before{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 2px;
+    height: 50px;
+    background: #fec144;
+    content: "";
+}
+.single-solution-style1 .text-holder .text h3{
+    color: #222222;
+    margin: 0 0 15px;
+}
+.single-solution-style1 .text-holder .text p{
+    margin: 0;
+}
+.single-solution-style1 .text-holder .text .readmore{
+    display: block;
+    padding-top: 15px;
+}
+
+.single-solution-style1 .overlay-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    display: block;
+    z-index: 11;
+    padding: 36px 20px 33px;
+    box-shadow: 0px 3px 7px 1px rgba(240,240,240,0.7);
+    background: #ffffff;
+    opacity: 0;
+    transition: all 0.4s ease-in-out 0s;
+}
+.single-solution-style1:hover .overlay-content{
+    opacity: 1;
+    transform: translateX(0%) translateY(-40px) scale(1);
+}
+
+.services-style1-area .owl-dots {
+    position: relative;
+    display: block !important;
+    margin-top: 25px !important;
+}
+.services-style1-area .owl-dots .owl-dot{
+    background-image:none;
+    width: 10px;
+    height: 10px;
+    margin: 5px 5px;
+    border: 2px solid #d5d5d5;
+    padding:0px;
+    background: #ffffff;
+    border-radius:50%;
+    transition: all 500ms ease;
+    display: inline-block;
+}
+.services-style1-area .owl-dots .owl-dot span{
+    display:none;
+}
+.services-style1-area .owl-dots .owl-dot.active{
+    background:#fec144;
+    border-color: #fec144;
+    border-radius: 15px;
+}
+.services-style1-area .owl-dots .owl-dot:hover{
+    background:#fec144;
+    border-color: #fec144;
+}
+
+
+

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>网站首页</title>
+    <meta name="Keywords" content="" />
+    <meta name="Description" content="" />
+    <link rel="stylesheet" href="css/txweb.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/owl.js"></script>
+    <!-- 大屏样式 -->
+    <style>
+        .main-menu {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            background-color: unset;
+            /* opacity: 0.2; */
+            /* color: white; */
+        }
+
+        .navbar-default .navbar-nav>.active>a,
+        .navbar-default .navbar-nav>.active>a:focus,
+        .navbar-default .navbar-nav>.active>a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .navbar-default .navbar-nav>li>a {
+            color: rgb(255, 255, 255);
+        }
+
+        ul.menu li a {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .menu .active {
+            border-bottom: 2px solid white;
+        }
+
+        .nav-footer {
+            margin-right: 35px;
+        }
+
+        /* @media (min-width: 1200px) {
+            .container {
+                width: 100%;
+            }
+        } */
+    </style>
+    <!-- 小屏样式 -->
+    <style>
+        @media (max-width: 760px) {
+            .navbar-default .navbar-nav>li>a {
+                color: black;
+            }
+
+            .main-menu {
+                position: unset;
+                background-color: white;
+            }
+
+            .navbar-default .navbar-nav>.active>a,
+            .navbar-default .navbar-nav>.active>a:focus,
+            .navbar-default .navbar-nav>.active>a:hover {
+                color: black;
+            }
+
+            .navbar-default .navbar-nav>.open>a,
+            .navbar-default .navbar-nav>.open>a:focus,
+            .navbar-default .navbar-nav>.open>a:hover {
+                color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 菜单栏 -->
+    <nav class="main-menu navbar navbar-default header" role="navigation">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-collapse"> <span
+                class="sr-only">切换导航</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                class="icon-bar"></span> </button>
+        <a class="logo" href="#"><img src="img/logo.png" alt="网站首页"></a>
+        <div class="collapse navbar-collapse headerTop" id="example-navbar-collapse">
+            <ul class="nav navbar-nav menu">
+                <li class="active"><a href="#">首页</a></li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 关于我们 <b
+                            class="caret"></b> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">公司简介</a></li>
+                        <li><a href="#">公司荣誉</a></li>
+                        <li><a href="#">发展历程</a></li>
+                        <li><a href="#">社会公益</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 服务中心 <b
+                            class="caret"></b> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">劳务派遣</a></li>
+                        <li><a href="#">岗位外包</a></li>
+                        <li><a href="#">招聘外包</a></li>
+                        <li><a href="#">灵活用工</a></li>
+                        <li><a href="#">生产作业外包</a></li>
+                        <li><a href="#">学历提升咨询</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 新闻资讯 <b
+                            class="caret"></b> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">集团动态</a></li>
+                        <li><a href="#">招聘信息</a></li>
+                        <li><a href="#">视频中心</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 联系我们 <b
+                            class="caret"></b> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">集团动态</a></li>
+                        <li><a href="#">招聘信息</a></li>
+                        <li><a href="#">视频中心</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 招商加盟 <b
+                            class="caret"></b> </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">人才招聘</a></li>
+                        <li><a href="#">招商加盟</a></li>
+                    </ul>
+                </li> -->
+                <li><a href="#">加入我们</a></li>
+                <li><a href="#">联络关注</a></li>
+
+            </ul>
+
+        </div>
+        <!-- 菜单栏右侧 -->
+        <ul class="txicon">
+            <li><a href="#"><span class="iconfont">&#xe632;</span></a></li>
+            <li><a href="#"><span class="iconfont">&#xe632;</span></a></li>
+            <li><a href="#"><span class="iconfont">&#xe632;</span></a></li>
+            <li><a href="#"><span class="iconfont">&#xe632;</span></a></li>
+        </ul>
+    </nav>
+    <!-- 轮播图 -->
+    <div id="banner" class="swiper-container">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide img">
+                <img src="pics/ban-1.jpg">
+            </a>
+            <a class="swiper-slide img">
+                <img src="pics/ban-2.jpg">
+            </a>
+            <a class="swiper-slide img">
+                <img src="pics/ban-1.jpg">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+    <!-- <a href="#" class="txtips"> 大量商品采购，请点击咨询销售经理 </a> -->
+    <!-- 头条资讯 -->
+    <section class="txnew-area">
+        <div class="container">
+            <div class="page-header">企业新闻
+                <ul class="list-nav right">
+                    <li><a href="#" class="cur">集团动态</a></li>
+                    <li><a href="#">招聘信息</a></li>
+                    <li><a href="#">视频中心</a></li>
+                </ul>
+            </div>
+            <!--title end -->
+            <ul class="list-news">
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 主要业务 -->
+    <section class="txnew-area">
+        <div class="container">
+            <div class="page-header">产品中心 <ul class="list-nav right">
+                    <li><a href="#" class="cur">城市轨道交通</a></li>
+                    <li><a href="#">桥梁工程</a></li>
+                </ul>
+            </div>
+            <!--title end -->
+            <ul class="tx_item">
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/1.jpg" alt="" /><span>隧道工程</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/2.jpg" alt="" /><span>桥梁工程</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/3.jpg" alt="" /><span>路基施工</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/4.jpg" alt="" /><span>信号</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/5.jpg" alt="" /><span>线路</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/6.jpg" alt="" /><span>供电</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/7.jpg" alt="" /><span>设备</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                            src="pics/8.jpg" alt="" /><span>更多精彩</span></a></li>
+            </ul>
+        </div>
+    </section>
+    <!--  -->
+    <div class="container-fluid txsnavm" style="background-image:url('https://www.createhr.com/static/home/img/zj-img.jpg');background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 475px;">
+        <div>
+            走进创享人力
+            我公司已为二百多家客户提供相应的人力资源外包服务，行业涉及仓储物流、电子信息、新能源、交通运输、快销零售、金融地产等15个行业，外包员工规模近万人。为贴近客户、快速响应客户需求，
+
+            在郫县、崇州、双流、龙泉、金堂、新都、温江、宜宾、重庆等地均建立有服务中心。
+            了解详情
+            
+        </div>
+        <!-- <ul class="txsnav">
+            <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+                    <div class="img-holder"> <img src="pics/img-1.jpg" alt="" /> </div>
+                    <div class="statics-content">
+                        <div class="icon"> <span class="iconfont">&#xe62b;</span> </div>
+                        <div class="text">
+                            <h3>高速简介</h3>
+                            <p>重庆辅材提供者前20强</p>
+                        </div>
+                    </div>
+                </a> </li>
+            <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+                    <div class="img-holder"> <img src="pics/img-2.jpg" alt="" /> </div>
+                    <div class="statics-content">
+                        <div class="icon"> <span class="iconfont">&#xe62b;</span> </div>
+                        <div class="text">
+                            <h3>荣誉资质</h3>
+                            <p>重庆辅材提供者前20强</p>
+                        </div>
+                    </div>
+                </a> </li>
+            <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+                    <div class="img-holder"> <img src="pics/img-3.jpg" alt="" /> </div>
+                    <div class="statics-content">
+                        <div class="icon"> <span class="iconfont">&#xe62b;</span> </div>
+                        <div class="text">
+                            <h3>招商加盟</h3>
+                            <p>重庆辅材提供者前20强</p>
+                        </div>
+                    </div>
+                </a> </li>
+            <li class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-12"> <a href="#">
+                    <div class="img-holder"> <img src="pics/img-4.jpg" alt="" /> </div>
+                    <div class="statics-content">
+                        <div class="icon"> <span class="iconfont">&#xe62b;</span> </div>
+                        <div class="text">
+                            <h3>服务</h3>
+                            <p>重庆辅材提供者前20强</p>
+                        </div>
+                    </div>
+                </a> </li>
+        </ul> -->
+    </div>
+
+    <!-- 轮播 -->
+    <!-- <section class="txpro-area">
+        <div class="container">
+            <div class="tx-title text-center">
+                <div class="title">所有产品</div>
+                <div class="inner">
+                    <div class="border1"></div>
+                    <span>products</span>
+                    <div class="border2"></div>
+                </div>
+                <p>建筑行业二三线辅材提供者，主要针对城市轨道交通，高铁，普铁，城市规划，办公耗材，<br />
+                    预埋件和其他的细分行业或项目服务</p>
+            </div>
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item single-solution-style1">
+                            <div class="img-holder"> <img src="pics/pronav-1.jpg" alt="城市轨道交通"> </div>
+                            <div class="statics-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe6ae;</span> </div>
+                                    <div class="text">
+                                        <h3>城市轨道交通</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overlay-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe6ae;</span> </div>
+                                    <div class="text">
+                                        <h3>城市轨道交通</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                        <div class="readmore"> <a class="btn-two" href="#"><span
+                                                    class="iconfont">&#xe68b;</span>查看更多</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item single-solution-style1">
+                            <div class="img-holder"> <img src="pics/pronav-2.jpg" alt="桥梁工程"> </div>
+                            <div class="statics-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe63a;</span> </div>
+                                    <div class="text">
+                                        <h3>桥梁工程</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overlay-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe63a;</span> </div>
+                                    <div class="text">
+                                        <h3>桥梁工程</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                        <div class="readmore"> <a class="btn-two" href="#"><span
+                                                    class="iconfont">&#xe68b;</span>查看更多</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item single-solution-style1">
+                            <div class="img-holder"> <img src="pics/pronav-3.jpg" alt="信号"> </div>
+                            <div class="statics-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe61a;</span> </div>
+                                    <div class="text">
+                                        <h3>信号</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overlay-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe61a;</span> </div>
+                                    <div class="text">
+                                        <h3>信号</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                        <div class="readmore"> <a class="btn-two" href="#"><span
+                                                    class="iconfont">&#xe68b;</span>查看更多</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item single-solution-style1">
+                            <div class="img-holder"> <img src="pics/pronav-4.jpg" alt="信号"> </div>
+                            <div class="statics-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe61a;</span> </div>
+                                    <div class="text">
+                                        <h3>信号</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overlay-content">
+                                <div class="text-holder">
+                                    <div class="icon"> <span class="iconfont">&#xe61a;</span> </div>
+                                    <div class="text">
+                                        <h3>信号</h3>
+                                        <p>城市轨道交通的信息描述，城市轨道交
+                                            通的信息描述城市轨道交通的信息描述，
+                                            市轨道交通的信...</p>
+                                        <div class="readmore"> <a class="btn-two" href="#"><span
+                                                    class="iconfont">&#xe68b;</span>查看更多</a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>
+                            $(document).ready(function () {
+                                $('.owl-carousel').owlCarousel({
+                                    loop: true,
+                                    margin: 10,
+                                    responsiveClass: true,
+                                    responsive: {
+                                        0: {
+                                            items: 1,
+                                            nav: true
+                                        },
+                                        600: {
+                                            items: 1,
+                                            nav: false,
+                                            loop: true,
+                                            doc: true,
+                                        },
+                                        1200: {
+                                            items: 2,
+                                            nav: false,
+                                            loop: true,
+                                            doc: true
+
+                                        }
+                                    }
+                                })
+                            })
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- 最新动态 -->
+    <section class="txnew-area">
+        <div class="container">
+            <!--title start-->
+            <!-- <div class="tx-title text-center">
+                <div class="title">最新动态</div>
+                <div class="inner">
+                    <div class="border1"></div>
+                    <span>news</span>
+                    <div class="border2"></div>
+                </div>
+            </div> -->
+            <!--title end -->
+            <ul class="list-news">
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"> <a href="#" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a></li>
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"> <a href="#" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a></li>
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"> <a href="#" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a></li>
+            </ul>
+        </div>
+    </section>
+    <!--  -->
+    <section>
+        <div class="container-fluid" style="background-image:url('https://www.createhr.com/static/home/img/zj-img.jpg');background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 475px;">
+            <div>
+                高效、专业、热忱、创新、诚信
+                致力成为中国更具价值体系的系统人力资源服务方案解决商
+                </pre>
+                <!-- <ul class="listc">
+                <li class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="li"> <img src="pics/img-1.jpg" alt="企业使命" class="imga">
+                        <div class="p-text">
+                            <div class="img"><span class="iconfont"></span></div>
+                            <div class="h-tit">企业使命</div>
+                            <div class="p"> 物通全球、产济天下 </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="li"> <img src="pics/img-2.jpg" alt="企业愿景" class="imga">
+                        <div class="p-text">
+                            <div class="img"><span class="iconfont"></span></div>
+                            <div class="h-tit">企业愿景</div>
+                            <div class="p"> 物通全球、产济天下 </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="li"> <img src="pics/img-3.jpg" alt="服务宗旨" class="imga">
+                        <div class="p-text">
+                            <div class="img"><span class="iconfont"></span></div>
+                            <div class="h-tit">服务宗旨</div>
+                            <div class="p"> 客户第一、员工第一、股东利益第二</div>
+                        </div>
+                    </div>
+                </li>
+            </ul> -->
+            </div>
+    </section>
+    <!-- 底部 -->
+    <footer class="web-footer">
+        <div class="container ">
+            <!-- hidden-xs xs隐藏 -->
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ovh">
+                <dl class="nav-footer left">
+                    <dt><a href="#">关于我们</a></dt>
+                    <dd><a href="#">公司简介</a></dd>
+                    <dd><a href="#">公司荣誉</a></dd>
+                    <dd><a href="#">发展历程</a></dd>
+                    <dd><a href="#">社会公益</a></dd>
+                </dl>
+                <dl class="nav-footer left">
+                    <dt><a href="#">服务中心</a></dt>
+                    <dd><a href="#">劳务派遣</a></dd>
+                    <dd><a href="#">岗位外包</a></dd>
+                    <dd><a href="#">招聘外包</a></dd>
+                    <dd><a href="#">灵活用工</a></dd>
+                    <dd><a href="#">生产作业外包</a></dd>
+                    <dd><a href="#">学历提升咨询</a></dd>
+                </dl>
+                <dl class="nav-footer left">
+                    <dt><a href="#">新闻资讯</a></dt>
+                    <dd><a href="#">集团动态</a></dd>
+                    <dd><a href="#">招聘信息</a></dd>
+                    <dd><a href="#">视频中心</a></dd>
+                </dl>
+                <dl class="nav-footer left">
+                    <dt><a href="#">加入我们</a></dt>
+                    <dd><a href="#">招贤纳士</a></dd>
+                </dl>
+                <dl class="nav-footer left">
+                    <dt><a href="#">联络关注</a></dt>
+                    <dd><a href="#">联系地址</a></dd>
+                    <dd><a href="#">联系电话</a></dd>
+                    <dd><a href="#">业务合作</a></dd>
+                </dl>
+                <dl class="nav-footer left">
+                    <dt><a href="#">友情链接</a></dt>
+                    <dd><a href="#">成都劳务派遣</a></dd>
+                    <dd><a href="#">人力资源产业园</a></dd>
+                </dl>
+                <div class="info-footer right hidden-xs">
+                    <ul>
+                        <li style="color: #29a9e9;"><span class="iconfont"></span>023-0000 0000</li>
+                        <li><span class="iconfont"></span>中国·重庆市九龙坡</li>
+                        <li><span class="iconfont"></span>023-0000-0000</li>
+                        <li><span class="iconfont"></span>gdyuwgh@126.com</li>
+                        <li>
+                            <div class="core left"><img alt=""
+                                    src="http://www.go-yd.com/uploadfile/2019/0716/20190716041507912.gif"
+                                    style="width: 87px; height: 88px;">手机版</div>
+                            <div class="core right"><img alt=""
+                                    src="http://www.go-yd.com/uploadfile/2019/0716/20190716041608195.jpg"
+                                    style="width: 80px; height: 80px;">微信公众号</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container visible-xs">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ovh">
+                <div class="info-footer left">
+                    <ul>
+                        <li style="color: #29a9e9;"><span class="iconfont"></span>023-0000 0000</li>
+                        <li><span class="iconfont"></span>中国·重庆市九龙坡</li>
+                        <li><span class="iconfont"></span>023-0000-0000</li>
+                        <li><span class="iconfont"></span>gdyuwgh@126.com</li>
+                        <li>
+                            <div class="core left"><img alt=""
+                                    src="http://www.go-yd.com/uploadfile/2019/0716/20190716041507912.gif"
+                                    style="width: 87px; height: 88px;">手机版</div>
+                            <div class="core right"><img alt=""
+                                    src="http://www.go-yd.com/uploadfile/2019/0716/20190716041608195.jpg"
+                                    style="width: 80px; height: 80px;">微信公众号</div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="web-copy col-xl-12 col-lg-12 col-md-12 col-sm-12">©ALIMAMA MUX, powered by alimama THX.法律声明
+                转载内容版权归作者及来源网站所有，本站原创内容转载请注明来源，商业媒体及纸媒请先联系：zy99945@alibaba-inc.com <a style="color:#4e4d4d;"
+                    href="http://www.beian.miit.gov.cn/" target="_blank">备案号：渝ICP备19009639号-1</a></div>
+        </div>
+    </footer>
+    <script>
+        $(function () {
+            //首页banner轮播图
+            var Bannerswiper = new Swiper('#banner', {
+                lazy: true,
+                loop: true,
+                autoplay: true,
+                speed: 600,
+                navigation: {
+                    nextEl: '#banner .swiper-button-next',
+                    prevEl: '#banner .swiper-button-prev',
+                },
+                pagination: {
+                    el: '#banner .swiper-pagination',
+                    clickable: true,
+                }
+            });
+
+            //推荐产品轮播图
+            var swiper1 = new Swiper('.recommendPro .swiper-container', {
+                autoplay: true,
+                speed: 600,
+                slidesPerView: 4,
+                spaceBetween: 40,
+                slidesPerGroup: 1,
+                loop: false,
+                loopFillGroupWithBlank: true,
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 25,
+                        slidesPerGroup: 1,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 15,
+                        slidesPerGroup: 1,
+                    }
+                },
+                navigation: {
+                    nextEl: '.recommendPro .swiper-button-next',
+                    prevEl: '.recommendPro .swiper-button-prev',
+                }
+            });
+            $('.recommendPro .swiper-container').mouseenter(function () {
+                swiper1.autoplay.stop();
+            });
+            $('.recommendPro .swiper-container').mouseleave(function () {
+                swiper1.autoplay.start();
+            });
+        })
+
+
+    </script>
+</body>
+
+</html>
