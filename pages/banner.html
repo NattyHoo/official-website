@@ -1,0 +1,42 @@
+
+<div id="bannerApp">
+    <!-- 轮播图 -->
+    <div id="banner" class="swiper-container">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide img" v-for="(item, index) in pptList" :key="index">
+                <img :src="item.img">
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
+
+</div>
+<script>
+
+    var bannerApp = new Vue({
+        el: '#bannerApp',
+        data: {
+            message: 'Hello Vue.js!',
+            pptList: [],
+        },
+        mounted() {
+
+            this.getIndexData()
+        },
+        methods: {
+            getIndexData() {
+                axios.get('../datas/slideshow.json', {}).then(res => {
+                    this.pptList = res.data
+                })
+            },
+            test(){
+                alert(111111)
+            }
+        }
+    })
+</script>
+</body>
+
+</html>

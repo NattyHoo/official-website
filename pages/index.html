@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="applicable-device" content="pc,mobile"/>
+    <meta name="MobileOptimized" content="width"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <title>网站首页</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../css/txweb.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/owl.js"></script>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- 大屏样式 -->
+    <style>
+        .main-menu {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            background-color: unset;
+            /* opacity: 0.2; */
+            /* color: white; */
+        }
+
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:focus,
+        .navbar-default .navbar-nav > .active > a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: rgb(255, 255, 255);
+        }
+
+        ul.menu li a {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .menu .active {
+            border-bottom: 2px solid white;
+        }
+
+        .nav-footer {
+            margin-right: 35px;
+        }
+
+        .text-left {
+            width: 60%;
+            color: white;
+        }
+
+        .text-center {
+            color: white;
+        }
+
+        .text-center p {
+            font-size: 30px;
+        }
+
+        .text-center div {
+            font-size: 20px;
+        }
+    </style>
+    <!-- 小屏样式 -->
+    <style>
+        @media (max-width: 760px) {
+            .navbar-default .navbar-nav > li > a {
+                color: black;
+            }
+
+            .main-menu {
+                position: unset;
+                background-color: white;
+            }
+
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:focus,
+            .navbar-default .navbar-nav > .active > a:hover {
+                color: black;
+            }
+
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:focus,
+            .navbar-default .navbar-nav > .open > a:hover {
+                color: black;
+            }
+
+            .text-left {
+                width: unset;
+            }
+
+            .text-center p, .text-center div {
+                font-size: unset;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="header-div"></div>
+<div id="banner-div"></div>
+<div id="indexApp">
+    <!-- 头条资讯 -->
+    <section class="txnew-area">
+        <div class="container">
+            <div class="page-header">企业新闻
+                <ul class="list-nav right">
+                    <li><a href="#" class="cur">集团动态</a></li>
+                    <li><a href="#">招聘信息</a></li>
+                    <li><a href="#">视频中心</a></li>
+                </ul>
+            </div>
+            <!--title end -->
+            <ul class="list-news">
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
+                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                        <div class="p-text">
+                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="p">
+                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                            </div>
+                        </div>
+                        <div class="bot f-cb">
+                            <div class="more fl">查看详情</div>
+                            <div class="time fr">2019.07.08</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 主要业务 -->
+    <section class="txnew-area">
+        <div class="container">
+            <div class="page-header">产品中心
+                <ul class="list-nav right">
+                    <li><a href="#" class="cur">城市轨道交通</a></li>
+                    <li><a href="#">桥梁工程</a></li>
+                </ul>
+            </div>
+            <!--title end -->
+            <ul class="tx_item">
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/1.jpg" alt=""/><span>隧道工程</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/2.jpg" alt=""/><span>桥梁工程</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/3.jpg" alt=""/><span>路基施工</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/4.jpg" alt=""/><span>信号</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/5.jpg" alt=""/><span>线路</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/6.jpg" alt=""/><span>供电</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/7.jpg" alt=""/><span>设备</span></a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-6"><a class="tx_bimg" href="prolist.html"><img
+                        src="../pics/8.jpg" alt=""/><span>更多精彩</span></a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- 固定展示1 -->
+    <div class="container-fluid txsnavm"
+         style="background-image:url('https://www.createhr.com/static/home/img/zj-img.jpg');background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <div class="container">
+            <div class="text-left">
+                <br>
+                <br>
+                <h3>走进创享人力</h3>
+                <br>
+                <p>我公司已为二百多家客户提供相应的人力资源外包服务，行业涉及仓储物流、电子信息、新能源、交通运输、快销零售、金融地产等15个行业，外包员工规模近万人。为贴近客户、快速响应客户需求，</p>
+                <br>
+                <p>在郫县、崇州、双流、龙泉、金堂、新都、温江、宜宾、重庆等地均建立有服务中心。</p>
+                <br>
+                <p>了解详情<i class="iconfont"></i></p>
+                <br>
+
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- 最新动态 -->
+    <section class="txnew-area">
+        <div class="container">
+            <!--title start-->
+            <!-- <div class="tx-title text-center">
+                <div class="title">最新动态</div>
+                <div class="inner">
+                    <div class="border1"></div>
+                    <span>news</span>
+                    <div class="border2"></div>
+                </div>
+            </div> -->
+            <!--title end -->
+            <ul class="list-news">
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"><a href="#" title="重庆老建筑与他曾经的故事">
+                    <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                    <div class="p-text">
+                        <div class="h">重庆老建筑与他曾经的故事</div>
+                        <div class="p">
+                            <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                        </div>
+                    </div>
+                    <div class="bot f-cb">
+                        <div class="more fl">查看详情</div>
+                        <div class="time fr">2019.07.08</div>
+                    </div>
+                </a></li>
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"><a href="#" title="重庆老建筑与他曾经的故事">
+                    <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                    <div class="p-text">
+                        <div class="h">重庆老建筑与他曾经的故事</div>
+                        <div class="p">
+                            <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                        </div>
+                    </div>
+                    <div class="bot f-cb">
+                        <div class="more fl">查看详情</div>
+                        <div class="time fr">2019.07.08</div>
+                    </div>
+                </a></li>
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"><a href="#" title="重庆老建筑与他曾经的故事">
+                    <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                    <div class="p-text">
+                        <div class="h">重庆老建筑与他曾经的故事</div>
+                        <div class="p">
+                            <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                        </div>
+                    </div>
+                    <div class="bot f-cb">
+                        <div class="more fl">查看详情</div>
+                        <div class="time fr">2019.07.08</div>
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+    </section>
+    <!-- 固定展示2 -->
+    <div class="container-fluid"
+         style="background-image:url('https://www.createhr.com/static/home/img/zj-img.jpg');background-position: center center;background-repeat: no-repeat;background-size: cover;">
+        <div>
+            <div class="text-center">
+                <br>
+                <br>
+                <br>
+                <br>
+                <p>高效、专业、热忱、创新、诚信</p>
+                <div>致力成为中国更具价值体系的系统人力资源服务方案解决商</div>
+                <br>
+                <br>
+                <br>
+                <br>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="footer-div"></div>
+<script>
+
+    new Vue({
+        el: '#indexApp',
+        data: {
+            message: 'Hello Vue.js!',
+            pptList: [],
+        },
+        mounted() {
+            $("#header-div").load("header.html", () => {
+                headerApp.active = 1
+            });
+            $("#banner-div").load("banner.html");
+            $("#footer-div").load("footer.html");
+
+        },
+        methods: {
+            getIndexData() {
+                axios.get('../datas/slideshow.json', {}).then(res => {
+                    this.pptList = res.data
+                })
+            }
+        }
+    })
+</script>
+</body>
+
+</html>
