@@ -11,7 +11,7 @@
     <meta name="applicable-device" content="pc,mobile"/>
     <meta name="MobileOptimized" content="width"/>
     <meta name="HandheldFriendly" content="true"/>
-    <title>资讯列表</title>
+    <title>资讯详情</title>
     <meta name="Keywords" content=""/>
     <meta name="Description" content=""/>
     <link rel="stylesheet" href="../css/txweb.css">
@@ -72,6 +72,14 @@
         .text-center div {
             font-size: 20px;
         }
+        /* 当前页面专属 */
+        .service-ul p{
+            line-height: 2;
+        }
+        .service-ul h3{
+            border-left: 4px solid #3287E4;
+            padding-left: 10px;
+        }
     </style>
     <!-- 小屏样式 -->
     <style>
@@ -112,10 +120,9 @@
 <body>
 <div id="header-div"></div>
 <div id="banner-div"></div>
-<div id="newsListApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
-    <section class="txnew-area">
+<div id="newsDetailApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
         <div class="container">
-            <div class="page-header">企业新闻
+            <!--<div class="page-header">企业新闻
                 <ul class="list-nav right">
                     <li>
                         <a href="news_list.html?type=1" :class="{cur: type == '1'}">集团动态</a>
@@ -127,37 +134,43 @@
                         <a href="news_list.html?type=3" :class="{cur: type == '3'}">视频信息</a>
                     </li>
                 </ul>
-            </div>
-
+            </div>-->
+            <!--<div class="container">
+                <h3>岗位外包服务</h3>
+                <p>
+                    岗位外包是人才/劳务派遣的延伸产品，企业将公司内的部分业务或职能工作内容（非核心岗位）发包给相关机构，由其自行安排人员，按照企业的要求完成对该岗位从人员招聘直至劳动关系终止的全流程、全风险的外包服务，双方以岗位打包价格来结算。劳务派遣公司负责全部 HR 工作，独立行使雇主责任，企业在保证用工量的同时，能够投入更多精力专注于核心业务的发展。
+                </p>
+            </div>-->
             <!--title end -->
-            <ul class="list-news">
-                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12" v-for="(item, index) in newsList">
-                    <a :href="'news_detail.html?type='+type+'&id='+item.id" :title="item.title">
-                        <div class="img">
-                            <img :src="path + item.img" :alt="item.title">
-                        </div>
-                        <div class="p-text">
-                            <div class="h">{{item.title}}</div>
-                            <div class="p">
-                                <p>{{item.summary}}</p>
-                            </div>
-                        </div>
-                        <div class="bot f-cb">
-                            <div class="more fl">查看详情</div>
-                            <div class="time fr">{{item.time}}</div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <div class="wpage">
-                <div class="page f-cb">
-                    <div class="pagination col-xl-12 col-lg-12 col-md-12 col-sm-12"><a class="active" href="#">1</a><a
-                            href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a class="next" href="#">&gt;</a>
-                    </div>
-                </div>
-            </div>
+<!--            <div class="container">-->
+                <ul class="list-news service-ul">
+                    <li  class="col-lg-9 col-md-9 col-sm-9">
+                        <h2>岗位外包服务</h2>
+                        <p>
+                            岗位外包是人才/劳务派遣的延伸产品，企业将公司内的部分业务或职能工作内容（非核心岗位）发包给相关机构，由其自行安排人员，按照企业的要求完成对该岗位从人员招聘直至劳动关系终止的全流程、全风险的外包服务，双方以岗位打包价格来结算。劳务派遣公司负责全部 HR 工作，独立行使雇主责任，企业在保证用工量的同时，能够投入更多精力专注于核心业务的发展。
+                        </p>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-12">
+                        <h3>服务内容</h3>
+                        <p><strong>岗位招聘服务。</strong>针对企业指定的岗位，提供专业的人员招聘、入职培训、劳动关系管理、考勤管理、绩效管理、薪酬福利体系设计及管理、岗位补充再招聘等服务。
+
+                            <p><strong>员工的离职管理。</strong>承担员工离职及客户退工导致的劳动风险，并为员工重新找到工作岗位提供帮助。提供处理劳动纠纷、工伤和劳动关系终止补偿等事务的专业意见。</p>
+
+                        <p><strong>员工离职管理。</strong>负责员工的离职管理，承担员工离职及客户退工导致的劳务风险，为员工重新找到工作岗位提供帮助；</p>
+
+                            <p>针对企业某些特定时段或场合临时性用工需求，提供以小时为计价单位的岗位外包服务，满足企业用工的弹性需求。</p>
+                    </li>
+                    <li class="col-lg-6 col-md-6 col-sm-12">
+                        <h3>产品优势</h3>
+                        <ul>
+                            <li><p>广泛的招聘渠道，通过对互联网、二级代理、行业合作及各大院校等不同招聘渠道的有效整合，实现快速精准的人员招聘。</p></li>
+                            <li><p>专业的招聘团队，公司拥有经验丰富的招聘专员以及完整、规范的招聘流程，有效提高招聘效率。</p></li>
+                            <li><p>具备丰富的员工管理经验及良好的政府关系，有效降低用工风险发生的概率，避免企业卷入负面事件，提升企业雇主形象和品牌影响力。</p></li>
+                        </ul>
+                    </li>
+                </ul>
+<!--            </div>-->
         </div>
-    </section>
 </div>
 <div id="footer-div"></div>
 <script>
@@ -168,28 +181,34 @@
     // })
 
     new Vue({
-        el: '#newsListApp',
+        el: '#newsDetailApp',
         data: {
-            path:"../",
+            path: "../",
+            type:'1',
+            id: 2,
             newsList: [],
-            type: '1',
+            currentNews: {},
+            nextNews: {},
+            previousNews: {},
         },
         mounted() {
             $("#header-div").load("header.html", () => {
-                headerApp.active = 4
+                headerApp.active = 3
             });
             $("#banner-div").load("banner.html");
             $("#footer-div").load("footer.html");
-            let type = this.getPathParams('type')
-            console.log(type)
-            this.type = type
+            this.type = this.getPathParams('type')
+            this.id = parseInt(this.getPathParams('id'))
             this.init()
         },
         methods: {
             init() {
                 axios.get('../../datas/news.json', {}).then(res => {
-                    console.log(res)
-                    this.newsList = res.data
+                    let newsList = res.data;
+                    this.newsList = newsList
+                    this.currentNews = newsList.filter(item => item.id === this.id)[0]
+                    this.nextNews = newsList.filter(item => item.id === this.id + 1)[0]
+                    this.previousNews = newsList.filter(item => item.id === this.id - 1)[0]
                 })
             },
             getPathParams (variable) {

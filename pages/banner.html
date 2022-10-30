@@ -5,6 +5,10 @@
         <div class="swiper-wrapper">
             <a class="swiper-slide img" v-for="(item, index) in pptList" :key="index">
                 <img :src="item.img">
+                <div style="position: absolute;z-index: 99;top: 200px;padding-left: 100px;color: white">
+                    <h1>一起创造， 共同分享</h1>
+                    <h3>中国蓝领终身职业顾问服务商</h3>
+                </div>
             </a>
         </div>
         <div class="swiper-pagination"></div>

@@ -16,10 +16,10 @@ a:focus{outline:none}
 a:hover,a:active{outline:none}
 a:focus{outline:none}
 sub,sup{vertical-align:baseline}
-a:link{text-decoration:none;   /* Ö¸Õý³£µÄÎ´±»·ÃÎÊ¹ýµÄÁ´½Ó*/}
-a:visited{text-decoration:none; /*Ö¸ÒÑ¾­·ÃÎÊ¹ýµÄÁ´½Ó*/}
-a:hover{text-decoration:none;/*Ö¸Êó±êÔÚÁ´½Ó*/}
-a:active{text-decoration:none;/* Ö¸ÕýÔÚµãµÄÁ´½Ó*/ }
+a:link{text-decoration:none;   /* Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/}
+a:visited{text-decoration:none; /*Ö¸ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/}
+a:hover{text-decoration:none;/*Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/}
+a:active{text-decoration:none;/* Ö¸ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½*/ }
 .left{ float: left;}
 .right{ float: right;}
 .ovh{ overflow: hidden;}

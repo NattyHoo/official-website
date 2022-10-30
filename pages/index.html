@@ -112,7 +112,7 @@
 <body>
 <div id="header-div"></div>
 <div id="banner-div"></div>
-<div id="indexApp">
+<div id="indexApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
     <!-- 头条资讯 -->
     <section class="txnew-area">
         <div class="container">
@@ -318,7 +318,10 @@
 </div>
 <div id="footer-div"></div>
 <script>
+    $(function () {
+        //首页banner轮播图
 
+    })
     new Vue({
         el: '#indexApp',
         data: {
@@ -329,7 +332,55 @@
             $("#header-div").load("header.html", () => {
                 headerApp.active = 1
             });
-            $("#banner-div").load("banner.html");
+            $("#banner-div").load("banner.html", () => {
+                var Bannerswiper = new Swiper('#banner', {
+                    lazy: true,
+                    loop: true,
+                    autoplay: true,
+                    speed: 600,
+                    navigation: {
+                        nextEl: '#banner .swiper-button-next',
+                        prevEl: '#banner .swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '#banner .swiper-pagination',
+                        clickable: true,
+                    }
+                });
+
+                //推荐产品轮播图
+                var swiper1 = new Swiper('.recommendPro .swiper-container', {
+                    autoplay: true,
+                    speed: 600,
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                    slidesPerGroup: 1,
+                    loop: false,
+                    loopFillGroupWithBlank: true,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 25,
+                            slidesPerGroup: 1,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 15,
+                            slidesPerGroup: 1,
+                        }
+                    },
+                    navigation: {
+                        nextEl: '.recommendPro .swiper-button-next',
+                        prevEl: '.recommendPro .swiper-button-prev',
+                    }
+                });
+                $('.recommendPro .swiper-container').mouseenter(function () {
+                    swiper1.autoplay.stop();
+                });
+                $('.recommendPro .swiper-container').mouseleave(function () {
+                    swiper1.autoplay.start();
+                });
+            });
             $("#footer-div").load("footer.html");
 
         },
