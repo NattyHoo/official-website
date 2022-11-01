@@ -176,7 +176,7 @@
         },
         methods: {
             init() {
-                axios.get('../../datas/news.json', {}).then(res => {
+                axios.get('../datas/news.json', {}).then(res => {
                     let newsList = res.data;
                     this.newsList = newsList
                     this.currentNews = newsList.filter(item => item.id === this.id)[0]

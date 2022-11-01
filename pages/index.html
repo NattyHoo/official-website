@@ -72,6 +72,19 @@
         .text-center div {
             font-size: 20px;
         }
+
+        .wenhua li {
+            padding: unset;
+        }
+
+        .wenhua-div {
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10%;
+            color: white;
+            cursor: pointer;
+        }
     </style>
     <!-- 小屏样式 -->
     <style>
@@ -105,7 +118,8 @@
                 font-size: unset;
                 font-weight: bold;
             }
-            .list-news .col-sm-12,.col-xs-12{
+
+            .list-news .col-sm-12, .col-xs-12 {
                 padding: unset;
             }
         }
@@ -114,77 +128,53 @@
 
 <body>
 <div id="header-div"></div>
-<div id="banner-div"></div>
+<!--<div id="banner-div"></div>-->
 <div id="indexApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
+    <!-- 轮播图 -->
+    <div id="banner" class="swiper-container">
+        <div class="swiper-wrapper">
+            <a class="swiper-slide img" v-for="(item, index) in pptList" :key="index">
+                <img :src="item.img">
+                <div style="position: absolute;z-index: 99;top: 200px;padding-left: 100px;color: white">
+                    <h1>一起创造， 共同分享</h1>
+                    <h3>中国蓝领终身职业顾问服务商</h3>
+                </div>
+            </a>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+    </div>
     <!-- 头条资讯 -->
     <section class="txnew-area">
         <div class="container">
             <div class="page-header">企业新闻
                 <ul class="list-nav right">
-                    <li><a href="#" class="cur">集团动态</a></li>
-                    <li><a href="#">招聘信息</a></li>
-                    <li><a href="#">视频中心</a></li>
+                    <li @mouseenter="changeType(1)">
+                        <a href="news_list.html?type=1" :class="{cur: type == '1'}">集团动态</a>
+                    </li>
+                    <li @mouseenter="changeType(2)">
+                        <a href="news_list.html?type=2" :class="{cur: type == '2'}">招聘信息</a>
+                    </li>
+                    <li @mouseenter="changeType(3)">
+                        <a href="news_list.html?type=3" :class="{cur: type == '3'}">视频中心</a>
+                    </li>
                 </ul>
             </div>
             <!--title end -->
             <ul class="list-news">
-                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
-                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
+                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12" v-for="(item, index) in showNewsList" :key="index">
+                    <a :href="'news_detail.html?type='+item.type+'&id='+item.id" :title="item.title">
+                        <div class="img"><img :src="path + item.img" :alt="item.title"></div>
                         <div class="p-text">
-                            <div class="h">重庆老建筑与他曾经的故事</div>
+                            <div class="h">{{item.title}}</div>
                             <div class="p">
-                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
+                                <p>{{item.summary}}</p>
                             </div>
                         </div>
                         <div class="bot f-cb">
                             <div class="more fl">查看详情</div>
-                            <div class="time fr">2019.07.08</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
-                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
-                        <div class="p-text">
-                            <div class="h">重庆老建筑与他曾经的故事</div>
-                            <div class="p">
-                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
-                            </div>
-                        </div>
-                        <div class="bot f-cb">
-                            <div class="more fl">查看详情</div>
-                            <div class="time fr">2019.07.08</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
-                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
-                        <div class="p-text">
-                            <div class="h">重庆老建筑与他曾经的故事</div>
-                            <div class="p">
-                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
-                            </div>
-                        </div>
-                        <div class="bot f-cb">
-                            <div class="more fl">查看详情</div>
-                            <div class="time fr">2019.07.08</div>
-                        </div>
-                    </a>
-                </li>
-                <li class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-                    <a href="news-detail.html" title="重庆老建筑与他曾经的故事">
-                        <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
-                        <div class="p-text">
-                            <div class="h">重庆老建筑与他曾经的故事</div>
-                            <div class="p">
-                                <p>单听名字，领事巷一定会让外地人有很多想象。记者第一次陪朋友从这里进入山城步道，朋友惊问：“这里住的全是外国人吗？”</p>
-                            </div>
-                        </div>
-                        <div class="bot f-cb">
-                            <div class="more fl">查看详情</div>
-                            <div class="time fr">2019.07.08</div>
+                            <div class="time fr">{{item.time}}</div>
                         </div>
                     </a>
                 </li>
@@ -244,19 +234,45 @@
     </div>
     <!-- 最新动态 -->
     <section class="txnew-area">
-        <div class="container">
-            <!--title start-->
-            <!-- <div class="tx-title text-center">
-                <div class="title">最新动态</div>
-                <div class="inner">
-                    <div class="border1"></div>
-                    <span>news</span>
-                    <div class="border2"></div>
-                </div>
-            </div> -->
-            <!--title end -->
-            <ul class="list-news">
-                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"><a href="#" title="重庆老建筑与他曾经的故事">
+        <div class="container" style="margin-top: 30px;margin-bottom: 30px">
+            <ul class="wenhua">
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <!--                    <a href="#" title="重庆老建筑与他曾经的故事">-->
+                    <div style="background-image: url(https://www.createhr.com/static/home/img/ry-bg.jpg);"
+                         class="wenhua-div">
+                        <h3 style="font-weight: 500">企业荣誉</h3>
+                        <p>有梦想，一起拼！</p>
+                        <br>
+                        <br>
+                        <p>了解详情 →</p>
+                    </div>
+                    <!--                    </a>-->
+                </li>
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <!--                    <a href="#" title="重庆老建筑与他曾经的故事">-->
+                    <div style="background-image: url(https://www.createhr.com/static/home/img/rc-img.jpg);"
+                         class="wenhua-div">
+                        <h3 style="font-weight: 500">企业荣誉</h3>
+                        <p>有梦想，一起拼！</p>
+                        <br>
+                        <br>
+                        <p>了解详情 →</p>
+                    </div>
+                    <!--                    </a>-->
+                </li>
+                <li class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                    <!--                    <a href="#" title="重庆老建筑与他曾经的故事">-->
+                    <div style="background-image: url(https://www.createhr.com/static/home/img/sh-img.jpg);"
+                         class="wenhua-div">
+                        <h3 style="font-weight: 500">企业荣誉</h3>
+                        <p>有梦想，一起拼！</p>
+                        <br>
+                        <br>
+                        <p>了解详情 →</p>
+                    </div>
+                    <!--                    </a>-->
+                </li>
+                <!--<li class="col-xl-4 col-lg-4 col-md-6 col-sm-12"><a href="#" title="重庆老建筑与他曾经的故事">
                     <div class="img"><img src="../pics/img-1.jpg" alt="重庆老建筑与他曾经的故事"></div>
                     <div class="p-text">
                         <div class="h">重庆老建筑与他曾经的故事</div>
@@ -294,7 +310,7 @@
                         <div class="more fl">查看详情</div>
                         <div class="time fr">2019.07.08</div>
                     </div>
-                </a></li>
+                </a></li>-->
             </ul>
         </div>
     </section>
@@ -321,73 +337,106 @@
 </div>
 <div id="footer-div"></div>
 <script>
+    $(function () {
+        var Bannerswiper = new Swiper('#banner', {
+            lazy: true,
+            loop: true,
+            autoplay: true,
+            speed: 600,
+            navigation: {
+                nextEl: '#banner .swiper-button-next',
+                prevEl: '#banner .swiper-button-prev',
+            },
+            pagination: {
+                el: '#banner .swiper-pagination',
+                clickable: true,
+            }
+        });
+
+        //推荐产品轮播图
+        var swiper1 = new Swiper('.recommendPro .swiper-container', {
+            autoplay: true,
+            speed: 600,
+            slidesPerView: 4,
+            spaceBetween: 40,
+            slidesPerGroup: 1,
+            loop: false,
+            loopFillGroupWithBlank: true,
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 25,
+                    slidesPerGroup: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 15,
+                    slidesPerGroup: 1,
+                }
+            },
+            navigation: {
+                nextEl: '.recommendPro .swiper-button-next',
+                prevEl: '.recommendPro .swiper-button-prev',
+            }
+        });
+        $('.recommendPro .swiper-container').mouseenter(function () {
+            swiper1.autoplay.stop();
+        });
+        $('.recommendPro .swiper-container').mouseleave(function () {
+            swiper1.autoplay.start();
+        });
+    })
+
     new Vue({
         el: '#indexApp',
         data: {
-            message: 'Hello Vue.js!',
-            pptList: [],
+            path: '../',
+            pptList: [
+                {
+                    "desc": "aaaaa",
+                    "img": "../pics/ban-1.jpg"
+                },
+                {
+                    "desc": "bbbb",
+                    "img": "../pics/ban-2.jpg"
+                },
+                {
+                    "desc": "cccc",
+                    "img": "../pics/ban-1.jpg"
+                },
+                {
+                    "desc": "dddd",
+                    "img": "../pics/ban-2.jpg"
+                }
+            ],
+            // 所有的资讯
+            newsList: [],
+            // 展示的资讯
+            showNewsList: [],
+            // 当前资讯类型
+            type: 1,
         },
         mounted() {
             $("#header-div").load("header.html", () => {
                 headerApp.active = 1
             });
-            $("#banner-div").load("banner.html", () => {
-                var Bannerswiper = new Swiper('#banner', {
-                    lazy: true,
-                    loop: true,
-                    autoplay: true,
-                    speed: 600,
-                    navigation: {
-                        nextEl: '#banner .swiper-button-next',
-                        prevEl: '#banner .swiper-button-prev',
-                    },
-                    pagination: {
-                        el: '#banner .swiper-pagination',
-                        clickable: true,
-                    }
-                });
+            /*$("#banner-div").load("banner.html", () => {
 
-                //推荐产品轮播图
-                var swiper1 = new Swiper('.recommendPro .swiper-container', {
-                    autoplay: true,
-                    speed: 600,
-                    slidesPerView: 4,
-                    spaceBetween: 40,
-                    slidesPerGroup: 1,
-                    loop: false,
-                    loopFillGroupWithBlank: true,
-                    breakpoints: {
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 25,
-                            slidesPerGroup: 1,
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 15,
-                            slidesPerGroup: 1,
-                        }
-                    },
-                    navigation: {
-                        nextEl: '.recommendPro .swiper-button-next',
-                        prevEl: '.recommendPro .swiper-button-prev',
-                    }
-                });
-                $('.recommendPro .swiper-container').mouseenter(function () {
-                    swiper1.autoplay.stop();
-                });
-                $('.recommendPro .swiper-container').mouseleave(function () {
-                    swiper1.autoplay.start();
-                });
-            });
+            });*/
             $("#footer-div").load("footer.html");
-
+            this.getIndexData()
         },
         methods: {
             getIndexData() {
-                axios.get('../datas/slideshow.json', {}).then(res => {
-                    this.pptList = res.data
+                axios.get('../datas/news.json', {}).then(res => {
+                    let newsList = res.data
+                    this.newsList = newsList
+                    this.showNewsList = newsList.filter(item => item.isTop && item.type === this.type)
                 })
+            },
+            changeType(type) {
+                this.type = type
+                this.showNewsList = this.newsList.filter(item => item.isTop && item.type === this.type)
             }
         }
     })
