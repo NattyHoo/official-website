@@ -7,17 +7,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="logo" href="index.html"><img src="../img/logo.png" alt="网站首页"><!--四川工海惠人力资源有限公司--></a>
+        <a class="logo" href="index.html" style="display: flex;align-items: center">
+            <img src="../img/logo_2.png" style="height: 47px" alt="网站首页">
+            <div style="color: white;padding-left: 10px"><!--color: #365DAB-->
+                <div style="text-align: center">四川工海惠</div>
+                <div style="font-size: 10px">人力资源有限公司</div>
+            </div>
+        </a>
         <div class="collapse navbar-collapse headerTop" id="example-navbar-collapse">
             <ul class="nav navbar-nav menu">
                 <li :class="{active: active == 1}"><a href="index.html">首页</a></li>
                 <li class="dropdown" :class="{active: active == 2}">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 关于我们 <b class="caret"></b> </a>
                     <ul class="dropdown-menu">
-                        <li><a href="#">公司简介</a></li>
-                        <li><a href="#">公司荣誉</a></li>
-                        <li><a href="#">发展历程</a></li>
-                        <li><a href="#">社会公益</a></li>
+                        <li><a href="about_us.html?type=1">公司简介</a></li>
+                        <li><a href="about_us.html?type=2">公司荣誉</a></li>
+                        <li><a href="about_us.html?type=3">发展历程</a></li>
+                        <li><a href="about_us.html?type=4">社会公益</a></li>
                     </ul>
                 </li>
                 <li class="dropdown" :class="{active: active == 3}">
@@ -39,8 +45,8 @@
                         <li><a href="news_list.html?type=3">视频中心</a></li>
                     </ul>
                 </li>
-                <li><a href="#" :class="{active: active == 5}">加入我们</a></li>
-                <li><a href="#" :class="{active: active == 6}">联络关注</a></li>
+                <li><a href="contact_us.html?type=1" :class="{active: active == 5}">加入我们</a></li>
+                <li><a href="contact_us.html?type=2" :class="{active: active == 6}">联络关注</a></li>
 
             </ul>
 

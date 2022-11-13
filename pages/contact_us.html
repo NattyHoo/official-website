@@ -72,6 +72,14 @@
         .text-center div {
             font-size: 20px;
         }
+
+        .fwshow b, i {
+            color: #407FDC;
+        }
+
+        .contact h4 {
+            line-height: 2;
+        }
     </style>
     <!-- 小屏样式 -->
     <style>
@@ -105,6 +113,10 @@
                 font-size: unset;
                 font-weight: bold;
             }
+
+            .list-news .col-sm-12, .col-xs-12 {
+                padding: unset;
+            }
         }
     </style>
 </head>
@@ -112,79 +124,107 @@
 <body>
 <div id="header-div"></div>
 <div id="banner-div"></div>
-<div id="newsDetailApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
+<div id="newsListApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
     <section class="txnew-area">
         <div class="container">
-            <div class="page-header">企业新闻
-                <ul class="list-nav right">
+            <div class="page-header">&nbsp;
+                <ul class="list-nav left">
                     <li>
-                        <a href="news_list.html?type=1" :class="{cur: type == '1'}">集团动态</a>
+                        <a href="javascript:void(0);" @click="type = '1'" :class="{cur: type == '1'}">加入我们</a>
                     </li>
                     <li>
-                        <a href="news_list.html?type=2" :class="{cur: type == '2'}">招聘信息</a>
-                    </li>
-                    <li>
-                        <a href="news_list.html?type=3" :class="{cur: type == '3'}">视频信息</a>
+                        <a href="javascript:void(0);" @click="type = '2'" :class="{cur: type == '2'}">联络关注</a>
                     </li>
                 </ul>
             </div>
-            <!--title end -->
-            <div class="container con-news">
-                <div class="info-top">
-                    <div class="h">{{currentNews.title}}</div>
-                </div>
-                <!-- 资讯内容 -->
-                <div class="container con-text" v-html="currentNews.content">
-<!--                    {{currentNews.content}}-->
-                </div>
-                <div class="bot f-cb">
-                    <div class="bot-l left">
-                        <span v-if="previousNews"><a class="t-jh" :href="'news_detail.html?type='+type+'&id='+previousNews.id" title="">上一篇:{{previousNews.title}}</a></span>
-                        <span><a class="t-jh" :href="'news_detail.html?type='+type+'&id='+nextNews.id" title="">下一篇:{{nextNews.title}}</a></span>
+
+            <!-- 加入我们 -->
+            <div v-show="type == '1'" style="margin-bottom: 30px">
+                <div class="left">
+                    <div style="display: flex;align-items: center">
+                        <h2 style="margin-bottom: 20px;margin-right: 20px">加入我们</h2>
+                        <div>
+                            <span>GROUP <br>INTRODUCTION</span>
+                        </div>
                     </div>
-                    <div class="bot-r right">
-                        <a class="t-jh" href="#">返回<span class="iconfont">&#xe6f0;</span></a>
+
+                    <div style="line-height: 2">
+                        <p>一起创造，共同分享</p>
+                        <p>为客户“创造价值、分享价值"为雇员“创造机会、分享机会"</p>
+                        <p>通过服务体现价值，并与客户、雇员建立可持续性的共赢合作模式</p>
                     </div>
                 </div>
             </div>
+
+            <!-- 联络关注 -->
+            <div v-show="type == '2'" style="margin-bottom: 30px">
+                <div class="left" style="margin-bottom: 30px">
+                    <div style="display: flex;align-items: center">
+                        <h2 style="margin-bottom: 20px;margin-right: 20px">四川工海惠人力资源有限公司</h2>
+                    </div>
+
+                    <div style="line-height: 2">
+                        <p>秉持“一起创造，共同分享”的理念，始终将服务创新、以人为本、作为企业的核心责任，通过不断的创新，为求职者提供免费就业机会。</p>
+                    </div>
+                </div>
+                <ul class="contact">
+                    <li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                        <h4>
+                            <span>总部服务热线：</span>
+                            <span>028-86156235111</span>
+                        </h4>
+                        <h4>
+                            <span>业务合作热线：</span>
+                            <span>028-86156235111</span>
+                        </h4>
+                        <h4>
+                            <span>招聘外包热线：</span>
+                            <span>028-86156235111</span>
+                        </h4>
+                    </li>
+                    <li class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                        <h4>
+                            <span>地址：</span>
+                            <span>成都市青羊区清XXXXXXXXXXXXXXXXXXXXXXX层</span>
+                        </h4>
+                        <h4>
+                            <span>邮箱：</span>
+                            <span>gonghaihui@mail.com</span>
+                        </h4>
+                    </li>
+                </ul>
+            </div>
+
         </div>
     </section>
 </div>
 <div id="footer-div"></div>
 <script>
-
     new Vue({
-        el: '#newsDetailApp',
+        el: '#newsListApp',
         data: {
             path: "../",
-            type:'1',
-            id: 2,
             newsList: [],
-            currentNews: {},
-            nextNews: {},
-            previousNews: {},
+            type: '2',
         },
         mounted() {
+            let type = this.getPathParams('type')
             $("#header-div").load("header.html", () => {
-                headerApp.active = 4
+                headerApp.active = type ? (type == '1' ? 5 : 6) : 5
             });
             $("#banner-div").load("banner.html");
             $("#footer-div").load("footer.html");
-            this.type = this.getPathParams('type')
-            this.id = parseInt(this.getPathParams('id'))
+            this.type = type ? type : this.type
             this.init()
         },
         methods: {
             init() {
                 axios.get('../datas/news.json', {}).then(res => {
-                    let newsList = res.data;
-                    this.newsList = newsList
-                    this.currentNews = newsList.filter(item => item.id === this.id)[0]
-                    this.nextNews = newsList.filter(item => item.id === this.id + 1)[0]
-                    this.previousNews = newsList.filter(item => item.id === this.id - 1)[0]
+                    console.log(res)
+                    this.newsList = res.data
                 })
             },
-            getPathParams (variable) {
+            getPathParams(variable) {
                 var query = window.location.search.substring(1);
                 var vars = query.split("&");
                 for (var i = 0; i < vars.length; i++) {

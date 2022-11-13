@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="Cache-Control" content="no-transform"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="applicable-device" content="pc,mobile"/>
+    <meta name="MobileOptimized" content="width"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <title>四川工海惠人力资源有限公司</title>
+    <meta name="Keywords" content=""/>
+    <meta name="Description" content=""/>
+    <link rel="stylesheet" href="../css/txweb.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/swiper.js"></script>
+    <script src="../js/wow.min.js"></script>
+    <script src="../js/owl.js"></script>
+    <script src="../js/vue.min.js"></script>
+    <script src="../js/axios.min.js"></script>
+    <!-- 大屏样式 -->
+    <style>
+        .main-menu {
+            position: absolute;
+            z-index: 999;
+            width: 100%;
+            background-color: unset;
+            /* opacity: 0.2; */
+            /* color: white; */
+        }
+
+        .navbar-default .navbar-nav > .active > a,
+        .navbar-default .navbar-nav > .active > a:focus,
+        .navbar-default .navbar-nav > .active > a:hover {
+            color: rgb(255, 255, 255);
+        }
+
+        .navbar-default .navbar-nav > li > a {
+            color: rgb(255, 255, 255);
+        }
+
+        ul.menu li a {
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .menu .active {
+            border-bottom: 2px solid white;
+        }
+
+        .nav-footer {
+            margin-right: 35px;
+        }
+
+        .text-left {
+            width: 60%;
+            color: white;
+        }
+
+        .text-center {
+            color: white;
+        }
+
+        .text-center p {
+            font-size: 30px;
+        }
+
+        .text-center div {
+            font-size: 20px;
+        }
+        .fwshow b,i{
+            color:#407FDC;
+        }
+    </style>
+    <!-- 小屏样式 -->
+    <style>
+        @media (max-width: 760px) {
+            .navbar-default .navbar-nav > li > a {
+                color: black;
+            }
+
+            .main-menu {
+                position: unset;
+                background-color: white;
+            }
+
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:focus,
+            .navbar-default .navbar-nav > .active > a:hover {
+                color: black;
+            }
+
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:focus,
+            .navbar-default .navbar-nav > .open > a:hover {
+                color: black;
+            }
+
+            .text-left {
+                width: unset;
+            }
+
+            .text-center p, .text-center div {
+                font-size: unset;
+                font-weight: bold;
+            }
+            .list-news .col-sm-12,.col-xs-12{
+                padding: unset;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div id="header-div"></div>
+<div id="banner-div"></div>
+<div id="newsListApp" style="background-image: linear-gradient(#c8dae6, #f0f5f9)!important;">
+    <section class="txnew-area">
+        <div class="container">
+            <div class="page-header">&nbsp;
+                <ul class="list-nav left">
+                    <li>
+                        <a href="javascript:void(0);" @click="type = '1'" :class="{cur: type == '1'}">公司简介</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" @click="type = '2'" :class="{cur: type == '2'}">公司荣誉</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" @click="type = '3'" :class="{cur: type == '3'}">发展历程</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);" @click="type = '4'" :class="{cur: type == '4'}">社会公益</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 公司简介 -->
+            <ul v-show="type == '1'" class="list-news" v-for="(item, index) in newsList" v-if="index == 0">
+                <li class="col-xl-7 col-lg-7 col-md-7 col-sm-12">
+                    <div class="left">
+                        <div style="display: flex;align-items: center">
+                            <h2 style="margin-bottom: 20px;margin-right: 20px">公司简介</h2>
+                            <div>
+                            <span>GROUP <br>INTRODUCTION</span>
+                            </div>
+                        </div>
+
+                        <div style="line-height: 2">
+                            <p>四川省创享人力资源管理有限公司成立于2010年，位于天府之国成都，目前已发展成为西南地区的蓝领人力资源外包服务供应商。公司已为二百多家客户提供相应的人力资源外包服务，行业涉及仓储物流、电子信息、新能源、交通运输、快销零售、金融地产等15个行业，外包员工规模近万人。为贴近客户、快速响应客户需求，在郫县、崇州、双流、龙泉、金堂、新都、温江、宜宾、重庆等地均建立有服务中心。</p>
+                            <p>我们将顺应产业发展趋势，引进国际的服务理念、服务项目、服务技术、服务标准、不断创新，进一步提高专业化水平服务于社会，致力于成为中国更具价值的蓝领人力资源服务方案解决商，一起创造，共同分享。</p>
+                        </div>
+
+                        <div class="fwshow">
+                            <ul>
+                                <li class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
+                                    <b style="font-size: 40px;">12</b><i>家</i>
+                                    <p>服务中心</p>
+                                </li>
+
+                                <li class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
+                                    <b style="font-size: 40px">6</b><i>项</i>
+                                    <p>业务类型</p>
+                                </li>
+
+                                <li class="col-xl-2 col-lg-2 col-md-3 col-sm-3">
+                                    <b style="font-size: 40px">1W</b><i>+</i>
+                                    <p>在职员工</p>
+                                </li>
+
+                                <li class="col-md-3 col-sm-3">
+                                    <b style="font-size: 40px">10</b><i>万人次</i>
+                                    <p>平均服务求职者</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="col-xl-5 col-lg-5 col-md-5 col-sm-12">
+                    <img src="../resource/1.jpg" style="width: 100%">
+                </li>
+            </ul>
+
+            <!-- 公司荣誉 -->
+            <ul v-show="type == '2'" class="list-news">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12" v-for="i in 6">
+                    <div style="display: flex;flex-direction: column;align-items: center">
+                        <img src="../resource/zz.jpg" style="width: 100%">
+                        <h5>全国劳务派遣优秀服务单位</h5>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- 发展历程 -->
+            <div v-show="type == '3'" class="list-news" style="display: flex;justify-content: space-between;overflow-x: auto">
+                <div style="min-width: 205px;margin: 10px;display: flex;flex-direction: column;align-items: center" v-for="i in 5">
+                    <h3>1998</h3>
+                    <span style="display: block;width: 11px; height: 11px;background: rgba(64,127,220,1);border-radius: 50%;"></span>
+                    <div style="display: flex;flex-direction: column;align-items: center;background: white; padding: 20px;line-height: 2;margin-top: 20px">
+                        <span style="display: block;width: 77px; height: 77px;background: rgba(64,127,220,1);border-radius: 50%;"></span>
+                        <div style="margin: 10px 0">溯源</div>
+                        <p>
+                            成都市团委再就业帮扶中心“协助市委、市政府向下岗失业职工、 困难职工提供一站式救助、援助和 服务的社会公益性机构
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 社会公益 -->
+            <ul v-show="type == '4'" class="list-news">
+                <li class="col-xl-3 col-lg-4 col-md-6 col-sm-12"  v-for="i in 6">
+                    <div class="left">
+                        <div style="color: #407FDC"><h1 style="display: inline">17</h1> <span>2022/11</span></div>
+                        <h3>致力公益事业，爱心成就未来</h3>
+                        <p style="line-height: 2">每年的十二月是创享人力的公益文化月，践行公益，不忘初心，我们一直在路上！ 今年</p>
+                        <img src="../resource/1.jpg" style="width: 100%">
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+</div>
+<div id="footer-div"></div>
+<script>
+    new Vue({
+        el: '#newsListApp',
+        data: {
+            path:"../",
+            newsList: [],
+            type: '1',
+        },
+        mounted() {
+            $("#header-div").load("header.html", () => {
+                headerApp.active = 2
+            });
+            $("#banner-div").load("banner.html");
+            $("#footer-div").load("footer.html");
+            let type = this.getPathParams('type')
+            console.log(type)
+            this.type = type ? type : this.type
+            this.init()
+        },
+        methods: {
+            init() {
+                axios.get('../datas/news.json', {}).then(res => {
+                    console.log(res)
+                    this.newsList = res.data
+                })
+            },
+            getPathParams (variable) {
+                var query = window.location.search.substring(1);
+                var vars = query.split("&");
+                for (var i = 0; i < vars.length; i++) {
+                    var pair = vars[i].split("=");
+                    if (pair[0] == variable) {
+                        return pair[1];
+                    }
+                }
+                return (false);
+            }
+        }
+    })
+</script>
+</body>
+
+</html>
